@@ -46,7 +46,7 @@
 
   <div id = "content">
     <!-- Header -->
-    <h1><?= $welcome ?>, Guest!</h1>
+    <h1><?= $welcome ?> Guest!</h1>
     <!-- Header -->
 
     <!-- Main content -->
