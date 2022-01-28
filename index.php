@@ -7,12 +7,12 @@
   $year = strftime('%Y');
 
   /* 
-    получаем текущий час в виде строки от 00 до 23 
-    и приводим строку к целому числу от 0 до 23
+    get an hour in string view from 00 to 23
+    and reduce the string to an integer from 0 to 23
   */
 
   $hour = (int)strftime('%H');
-  $welcome = ''; // инициализируем переменную для приветствия
+  $welcome = ''; // initilize the variable for welcome
   if($hour>0 and $hour<6) {
     $welcome = "Good night!";
   } elseif ($hour>=6 and $hour<12) {
@@ -38,38 +38,41 @@
 <body>
 
   <div id="header">
-    <!-- Верхняя часть страницы -->
+    <!-- Upper part of the page -->
     <img src="assets/imgs/logo.gif" width="187" height="100px" alt="logo" class="logo">
     <span class="slogan">come to us for learning</span>
-    <!-- Верхняя часть страницы -->
+    <!-- /Upper part of the page -->
   </div>
 
   <div id = "content">
-    <!-- Заголовок -->
+    <!-- Header -->
     <h1><?= $welcome ?>, Guest!</h1>
-    <!-- Заголовок -->
-    <!-- Область основного контента -->
+    <!-- Header -->
+
+    <!-- Main content -->
     <blockquote>
-      <?php echo "Сегодня $day число, $mon месяц, $year год." ?>
+      <?php echo "Today's $day day, $mon month, $year year." ?>
     </blockquote>
     
-    <h3>Зачем мы ходим в школу?</h3>
+    <h3>Why are we learning?</h3>
     <p>
-      У нас каждую минуту что-то происходит и кипит жизнь. Проходят уроки и шумят перемены, кто-то отвечает у доски, кто-то отчаянно зубрит перед контрольной пройденный материал, кому-то ставят «пятерку» за сочинение, кого-то ругают за непрочитанную книгу, на школьной спортивной площадке ребята играют в футбол, а девочки – в волейбол, некоторые готовятся к соревнованиям, другие участвуют в репетициях праздников…
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos adipisci est totam, error rem aut a necessitatibus autem nostrum. Quo, porro corrupti? Hic repudiandae cupiditate eum nihil rem, minus magnam.
     </p>
-    <h3>Что такое ЕГЭ?</h3>
+    <h3>What is PHP?</h3>
     <p>
-      Аббревиатура ЕГЭ расшифровывается как "Единый Государственный Экзамен". Почему "единый"? ЕГЭ одновременно является и вступительным экзаменом в ВУЗ и итоговой оценкой каждого выпускника школы. К тому же на всей территории России используются однотипные задания и единая система оценки.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tenetur eaque corporis nulla ipsa quod velit est cum minus ab distinctio in itaque non fugit, accusamus laboriosam natus. Itaque, porro!
     </p>
     <p>
-      Результаты ЕГЭ оцениваются по 100-балльной и пятибалльной системам и заносятся в свидетельство о результатах единого государственного экзамена. Срок действия данного документа истекает 31 декабря года, следующего за годом его выдачи, поэтому у абитуриентов есть возможность поступать в ВУЗы со свидетельством ЕГЭ в течение двух лет.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate incidunt nihil quo est ut architecto ipsa delectus aliquid ratione sunt, odit adipisci tenetur similique a officia ea neque aut et.
     </p>
-    <!-- Область основного контента -->
+    <!-- /Main content -->
   </div>
+
   <div id="nav">
-    <!-- Навигация -->
+    <!-- Navigation -->
     <h2>Website navigation</h2>
-    <!-- Меню -->
+
+    <!-- Menu -->
     <?php 
     $mainMenu = [
       ['link'=>'Home', 'href'=> 'index.php'],
@@ -79,6 +82,7 @@
       ['link'=>'Calculator', 'href'=> 'calc.php'],
     ];
     ?>
+
     <ul>
       <li><a href='<?= $mainMenu[0]['href']?>'><?=$mainMenu[0]['link']?></a></li>
       <li><a href='<?= $mainMenu[1]['href']?>'><?=$mainMenu[1]['link']?></a></li>
@@ -86,13 +90,14 @@
       <li><a href='<?= $mainMenu[3]['href']?>'><?=$mainMenu[3]['link']?></a></li>
       <li><a href='<?= $mainMenu[4]['href']?>'><?=$mainMenu[4]['link']?></a></li>
     </ul>
-    <!-- Меню -->
-    <!-- Навигация -->
+    <!-- /Menu -->
+    <!-- /Navigation -->
   </div>
+
   <div id="footer">
-    <!-- Нижняя часть страницы -->
+    <!-- Bottom part of the page -->
     &copy; moek, 2020 &ndash; <?=$year ?>.
-    <!-- Нижняя часть страницы -->
+    <!-- /Bottom part of the page -->
   </div>
 </body>
 
