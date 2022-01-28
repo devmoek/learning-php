@@ -1,0 +1,6 @@
+# Apache server settings
+Options -Indexes
+DirectoryIndex index.php
+
+# php settings
+php_flag short_open_tag on 
