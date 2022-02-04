@@ -1,14 +1,21 @@
 <?php 
-
+  // Menu
+  $mainMenu = [
+    ['link'=>'Home', 'href'=> 'index.php'],
+    ['link'=>'About', 'href'=> 'about.php'],
+    ['link'=>'Contact', 'href'=> 'contact.php'],
+    ['link'=>'Times table', 'href'=> 'table.php'],
+    ['link'=>'Calculator', 'href'=> 'calc.php'],
+  ];
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>Контакты</title>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -43,21 +50,18 @@
     <!-- Область основного контента -->
   </div>
   <div id="nav">
-    <h2>Навигация по сайту</h2>
-    <!-- Меню -->
-    <ul>
-      <li><a href='index.php'>Домой</a>
-      </li>
-      <li><a href='about.php'>О нас</a>
-      </li>
-      <li><a href='contact.php'>Контакты</a>
-      </li>
-      <li><a href='table.php'>Таблица умножения</a>
-      </li>
-      <li><a href='calc.php'>Калькулятор</a>
-      </li>
-    </ul>
-    <!-- Меню -->
+    <h2>Website navigation</h2>
+    <!-- Menu -->
+      <?php
+      echo "<ul>";
+        foreach($mainMenu as $item) {
+          echo "<li>";
+          echo "<a href='{$item['href']}'>{$item['link']}</a>";
+          echo "</li>";
+        }
+      echo "</ul>";
+      ?>
+    <!-- /Menu -->
   </div>
   <div id="footer">
     <!-- Нижняя часть страницы -->

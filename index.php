@@ -1,4 +1,13 @@
 <?php 
+  // Menu
+  $mainMenu = [
+    ['link'=>'Home', 'href'=> 'index.php'],
+    ['link'=>'About', 'href'=> 'about.php'],
+    ['link'=>'Contact', 'href'=> 'contact.php'],
+    ['link'=>'Times table', 'href'=> 'table.php'],
+    ['link'=>'Calculator', 'href'=> 'calc.php'],
+  ];
+
   // date format
   setlocale(LC_ALL, "english");
   $mon = strftime('%B');
@@ -27,7 +36,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>moek learns php</title>
@@ -73,23 +82,15 @@
     <h2>Website navigation</h2>
 
     <!-- Menu -->
-    <?php 
-    $mainMenu = [
-      ['link'=>'Home', 'href'=> 'index.php'],
-      ['link'=>'About', 'href'=> 'about.php'],
-      ['link'=>'Contact', 'href'=> 'contact.php'],
-      ['link'=>'Times table', 'href'=> 'table.php'],
-      ['link'=>'Calculator', 'href'=> 'calc.php'],
-    ];
+    <?php
+    echo "<ul>";
+      foreach($mainMenu as $item) {
+        echo "<li>";
+        echo "<a href='{$item['href']}'>{$item['link']}</a>";
+        echo "</li>";
+      }
+    echo "</ul>";
     ?>
-
-    <ul>
-      <li><a href='<?= $mainMenu[0]['href']?>'><?=$mainMenu[0]['link']?></a></li>
-      <li><a href='<?= $mainMenu[1]['href']?>'><?=$mainMenu[1]['link']?></a></li>
-      <li><a href='<?= $mainMenu[2]['href']?>'><?=$mainMenu[2]['link']?></a></li>
-      <li><a href='<?= $mainMenu[3]['href']?>'><?=$mainMenu[3]['link']?></a></li>
-      <li><a href='<?= $mainMenu[4]['href']?>'><?=$mainMenu[4]['link']?></a></li>
-    </ul>
     <!-- /Menu -->
     <!-- /Navigation -->
   </div>
